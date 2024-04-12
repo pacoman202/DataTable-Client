@@ -1,0 +1,234 @@
+:root {
+  --dt-black-backgroundColor: #1e1e1e;
+  --dt-black-btnCurrent: #6b6b6b;
+  --dt-black-rowTable: #252525;
+  --dt-black-inputBorder: #555555 1px solid;
+
+  --dt-white-backgroundColor: #f5f5f5; /* Un poco más oscuro que el blanco puro */
+  --dt-white-btnCurrent: #d9d9d9; /* Un tono más oscuro para el botón actual */
+  --dt-white-rowTable: #e5e5e5; /* Un tono más oscuro para las filas de la tabla */
+  --dt-white-inputBorder: #d9d9d9 1px solid;
+
+  --dt-green-backgroundColor: #185a3d;
+  --dt-green-btnCurrent: #4caf50;
+  --dt-green-rowTable: #2e7d32;
+  --dt-green-inputBorder: #388e3c 1px solid;
+
+  --dt-red-backgroundColor: #b71c1c;
+  --dt-red-btnCurrent: #f44336;
+  --dt-red-rowTable: #d32f2f;
+  --dt-red-inputBorder: #e57373 1px solid;
+
+  --dt-blue-backgroundColor: #002244;
+  --dt-blue-btnCurrent: #0047ab;
+  --dt-blue-rowTable: #00428c;
+  --dt-blue-inputBorder: #4675aa 1px solid;
+
+  --dt-orange-backgroundColor: #e65100;
+  --dt-orange-btnCurrent: #ff6d00;
+  --dt-orange-rowTable: #ff7043;
+  --dt-orange-inputBorder: #ff8a65 1px solid;
+
+  --dt-textBlack: #000000;
+  --dt-textWhite: #ffffff;
+}
+
+.td-black-theme1 {
+  --td-backgroundColor: var(--dt-black-backgroundColor);
+  --td-btnCurrent: var(--dt-black-btnCurrent);
+}
+
+.td-black-theme2 {
+  --td-rowTable: var(--dt-black-rowTable);
+  --td-inputBorder: var(--dt-black-inputBorder);
+}
+
+.td-white-theme1 {
+  --td-backgroundColor: var(--dt-white-backgroundColor);
+  --td-btnCurrent: var(--dt-white-btnCurrent);
+}
+
+.td-white-theme2 {
+  --td-rowTable: var(--dt-white-rowTable);
+  --td-inputBorder: var(--dt-white-inputBorder);
+}
+
+.td-green-theme1 {
+  --td-backgroundColor: var(--dt-green-backgroundColor);
+  --td-btnCurrent: var(--dt-green-btnCurrent);
+}
+
+.td-green-theme2 {
+  --td-rowTable: var(--dt-green-rowTable);
+  --td-inputBorder: var(--dt-green-inputBorder);
+}
+
+.td-red-theme1 {
+  --td-backgroundColor: var(--dt-red-backgroundColor);
+  --td-btnCurrent: var(--dt-red-btnCurrent);
+}
+
+.td-red-theme2 {
+  --td-rowTable: var(--dt-red-rowTable);
+  --td-inputBorder: var(--dt-red-inputBorder);
+}
+
+.td-blue-theme1 {
+  --td-backgroundColor: var(--dt-blue-backgroundColor);
+  --td-btnCurrent: var(--dt-blue-btnCurrent);
+}
+
+.td-blue-theme2 {
+  --td-rowTable: var(--dt-blue-rowTable);
+  --td-inputBorder: var(--dt-blue-inputBorder);
+}
+
+.td-orange-theme1 {
+  --td-backgroundColor: var(--dt-orange-backgroundColor);
+  --td-btnCurrent: var(--dt-orange-btnCurrent);
+}
+
+.td-orange-theme2 {
+  --td-rowTable: var(--dt-orange-rowTable);
+  --td-inputBorder: var(--dt-orange-inputBorder);
+}
+
+.td-color-white {
+  --td-textColor: var(--dt-textWhite);
+}
+
+.td-color-Black {
+  --td-textColor: var(--dt-textBlack);
+}
+
+.dataTable {
+  width: 100%;
+  max-width: 100%;
+  padding-bottom: 14px;
+  margin: 0 auto;
+}
+
+.dataTable td {
+  padding: 14px;
+}
+
+.dataTable tbody tr:nth-child(odd) {
+  background-color: var(--td-rowTable);
+}
+
+.dataTable thead th {
+  padding: 14px;
+  font-weight: 1000;
+}
+
+.dataTable thead .up,
+.dataTable thead .down {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.dataTable thead .up::after {
+  content: "▲";
+}
+
+.dataTable thead .down::after {
+  content: "▼";
+}
+
+.containerDataTable {
+  background-color: var(--td-backgroundColor);
+  color: var(--td-textColor);
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  overflow-x: hidden;
+  border: var(--td-inputBorder);
+}
+
+.divDataTable{
+  overflow-x: auto;
+}
+
+.containerDataTable .flex select,
+.containerDataTable .flex input {
+  background: transparent;
+  border: var(--td-inputBorder);
+  color: var(--td-textColor);
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.containerDataTable .flex select option {
+  background-color: var(--td-backgroundColor);
+}
+
+.containerDataTable .flex select {
+  align-self: flex-start;
+  width: 50px;
+  height: 30px;
+}
+
+.containerDataTable .flex input {
+  align-self: flex-end;
+  width: 70%;
+  height: 20px;
+}
+
+.buttonsDataTable {
+  width: auto;
+  text-align: right;
+}
+
+.buttonsDataTable button {
+  background: transparent;
+  border: var(--td-inputBorder);
+  color: var(--td-textColor);
+  border-radius: 5px;
+  font-size: 14px;
+  height: 30px;
+  padding: 5px;
+  width: 30px;
+}
+
+.buttonsDataTable button:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.buttonsDataTable .pagCurrent {
+  background-color: var(--td-btnCurrent);
+}
+
+.containerDataTable .flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dataTable thead th:hover,
+.buttonsDataTable button:hover:not(.pagCurrent):not([disabled]) {
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.divDataTable::-webkit-scrollbar {
+  height: 10px;
+  background-color: rgba(var(--td-btnCurrent), 0.3);
+}
+
+.divDataTable::-webkit-scrollbar-thumb {
+  background-color: var(--td-rowTable);
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 720px) {
+  .containerDataTable .flex {
+    justify-content: center;
+  }
+
+  .containerDataTable .flex select,
+  .containerDataTable .flex input {
+    width: auto;
+    margin: 10px;
+  }
+}
